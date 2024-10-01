@@ -1,0 +1,37 @@
+    // To go in the course.json file
+    "_extensions": {
+        "_close": {
+          "_navOrder": 110,
+          "navLabel": "Close",
+          "_navTooltip": {
+            "_isEnabled": true,
+            "text": "Close"
+          }
+        }
+    }
+
+
+    "_close": {
+        "_isEnabled": true,
+        "_button": {
+            "_isEnabled": true,
+            "_closeViaLMSFinish": false,
+            "navigationAriaLabel": "Close course button",
+            "_notifyPromptIfIncomplete": {
+                "_isEnabled": false,
+                "title": "Confirm close",
+                "body": "Are you sure you want to exit the course?",
+                "confirm": "Exit course",
+                "cancel": "Cancel"
+            },
+            "_notifyPromptIfComplete": {
+                "_isEnabled": false,
+                "title": "Confirm close",
+                "body": "Are you sure you want to exit the course?",
+                "confirm": "Exit window",
+                "cancel": "Cancel"
+            }
+        },
+        "browserPromptIfIncomplete": "",
+        "browserPromptIfComplete": ""
+    }

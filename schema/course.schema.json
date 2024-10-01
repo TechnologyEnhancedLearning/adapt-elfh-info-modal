@@ -1,0 +1,140 @@
+{
+  "$anchor": "infoModal-course",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$patch": {
+    "source": {
+      "$ref": "course"
+    },
+    "with": {
+      "properties": {
+        "_globals": {
+          "type": "object",
+          "default": {},
+          "properties": {
+            "_extensions": {
+              "type": "object",
+              "default": {},
+              "properties": {
+                "_close": {
+                  "type": "object",
+                  "title": "Close",
+                  "default": {},
+                  "properties": {
+                    "closeButton": {
+                      "type": "string",
+                      "title": "Info Modal button ARIA label",
+                      "default": "Select here to view the content.",
+                      "_adapt": {
+                        "translatable": true
+                      }
+                    },
+                    "_navOrder": {
+                      "type": "number",
+                      "title": "Info modal button Nav order",
+                      "description": "Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.",
+                      "default": 150
+                    },
+                    "navLabel": {
+                      "type": "string",
+                      "title": "Navigation bar button label",
+                      "default": "Information",
+                      "_adapt": {
+                        "translatable": true
+                      }
+                    },
+                    "_navTooltip": {
+                      "type": "object",
+                      "title": "Navigation tooltip",
+                      "properties": {
+                        "_isEnabled": {
+                          "type": "boolean",
+                          "title": "Enable tooltip for navigation button",
+                          "default": true
+                        },
+                        "text": {
+                          "type": "string",
+                          "title": "Tooltip text",
+                          "default": "View information",
+                          "_adapt": {
+                            "translatable": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_infoModal": {
+          "type": "object",
+          "title": "Info modal",
+          "default": {},
+          "properties": {
+            "_isEnabled": {
+              "type": "boolean",
+              "title": "Enabled?",
+              "default": true
+            },
+            "_button": {
+              "type": "object",
+              "title": "Button",
+              "default": {},
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "title": "Enabled?",
+                  "description": "Set to 'true' to add an information modal button to the navigation bar",
+                  "default": true
+                },
+                "navigationAriaLabel": {
+                  "type": "string",
+                  "title": "Navigation button alt text",
+                  "default": "Information modal button",
+                  "_adapt": {
+                    "translatable": true
+                  }
+                },
+                "_notifyPrompt": {
+                  "type": "object",
+                  "title": "Notify prompt if incomplete",
+                  "default": {},
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "title": "Enabled?",
+                      "description": "Set to true to display a notify prompt if the information modal button is selected while the course is incomplete",
+                      "default": false
+                    },
+                    "title": {
+                      "type": "string",
+                      "title": "Title",
+                      "description": "Enter the prompt title",
+                      "default": "Confirm close",
+                      "_adapt": {
+                        "translatable": true
+                      }
+                    },
+                    "body": {
+                      "type": "string",
+                      "title": "Body",
+                      "description": "Enter the prompt message",
+                      "default": "Are you sure you want to exit the course?",
+                      "_adapt": {
+                        "translatable": true
+                      },
+                      "_backboneForms": "TextArea"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}

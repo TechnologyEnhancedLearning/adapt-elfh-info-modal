@@ -1,0 +1,17 @@
+{
+  "name": "adapt-elfh-info-modal",
+  "version": "1.0.0-beta.0",
+  "framework": ">=5.30.3",
+  "extension": "infoModal",
+  "displayName": "Information modal",
+  "description": "An extension to add an information button to the navigation bar and display information in a modal",
+  "main": "/js/adapt-elfh-info-modal.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "",
+  "targetAttribute": "_infoModal",
+  "private": true
+}

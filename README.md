@@ -1,0 +1,42 @@
+# Information modal
+
+An extension to add a button to the nav bar that when clicked displays a modal with textual content populated by the course creator.
+
+## Installation
+
+- Add the [example JSON](example.json) to `course.json`.
+- With [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run `adapt install info-modal`. Alternatively, [download the ZIP](Link to be added) and extract into the src > extensions directory.
+- Run an appropriate Grunt task.
+
+## Usage
+
+- An icon button can be added to the navigation bar.
+- When the learner clicks the icon button, a [Notify](https://github.com/adaptlearning/adapt_framework/wiki/Core-modules#notify) prompt can be shown that displays content populated by the course creator.
+
+## Attributes
+
+### `_isEnabled` (boolean):
+
+Enables/disables this extension. The default value is `true`. Set this to `true` to enable this extension.
+
+### `_button` (object):
+
+Contains the following settings:
+
+- `_isEnabled` (boolean):
+  Controls whether an icon button should be added to the top navigation bar or not. The default value is `true`.
+
+- `_notifyPrompt` (object):
+  Contains the following settings:
+
+      * `_isEnabled` (boolean):
+
+  Controls whether a modal prompt should be displayed if the learner clicks the icon button. The default value is `true`.
+
+      * `title` (string):
+
+  Title of the modal prompt e.g. "Accessibility statement"
+
+      * `body` (string):
+
+  Body text of the modal prompt e.g. the content could be an accessibility statement

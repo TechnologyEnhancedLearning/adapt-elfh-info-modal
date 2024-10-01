@@ -1,0 +1,128 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "globals": {
+    "infoModalButton": {
+      "type": "string",
+      "default": "Select here to view the information.",
+      "title": "Information modal button ARIA label",
+      "inputType": "Text",
+      "translatable": true
+    },
+    "_navOrder": {
+      "type": "number",
+      "default": "Determines the order in which the object is displayed in the navigation bar. Negative numbers (e.g. -100) are left-aligned. Positive numbers (e.g. 100) are right-aligned.",
+      "title": "Information modal button Nav order",
+      "required": true,
+      "default": 150,
+      "inputType": "Text",
+      "validators": []
+    },
+    "navLabel": {
+      "type": "string",
+      "required": true,
+      "default": Information,
+      "inputType": "Text",
+      "translatable": true
+    },
+    "_navTooltip": {
+      "type": "object",
+      "title": "Navigation tooltip",
+      "properties": {
+        "_isEnabled": {
+          "type": "boolean",
+          "title": "Enable tooltip for navigation button",
+          "default": true,
+          "inputType": "Checkbox",
+          "validators": [],
+          "required": true
+        },
+        "text": {
+          "type": "string",
+          "title": "Tooltip text",
+          "default": "Accessibility",
+          "inputType": "Text",
+          "required": true
+        }
+      }
+    }
+  },
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "properties": {
+        "course": {
+          "type": "object",
+          "properties": {
+            "_infoModal": {
+              "type": "object",
+              "legend": "Information modal",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "required":true,
+                  "default": true,
+                  "title": "Enabled?",
+                  "inputType": "Checkbox",
+                  "validators": []
+                },
+                "_button": {
+                  "type": "object",
+                  "title": "Button",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "default": true,
+                      "title": "Enabled?",
+                      "inputType": "Checkbox",
+                      "help": "Set to 'true' to add an information modal button to the navigation bar"
+                    },
+                    "navigationAriaLabel": {
+                      "type": "string",
+                      "default": "Information modal button",
+                      "title": "Navigation button alt text",
+                      "inputType": "Text",
+                      "required": true,
+                      "translatable": true
+                    },
+                    "_iconType": {
+                      "type": "string",
+                      "required": true,
+                      "enum": ["accessibility", "info", "help"],
+                      "default": "accessibility",
+                      "title": "Icon Type",
+                      "inputType": { "type": "Select", "options": ["accessibility", "info", "help"] },
+                      "validators": ["required"],
+                      "help": "Specifies the type of icon to use for the info modal button"
+                    },
+                    "_notifyPrompt": {
+                      "type": "object",
+                      "title": "Modal properties",
+                      "properties": {
+                        "title": {
+                          "type": "string",
+                          "default": "Accessibility",
+                          "inputType": "Text",
+                          "help": "Enter the modal title",
+                          "translatable": true
+                        },
+                        "body": {
+                          "type": "string",
+                          "default": "This is the default accessibility statement.",
+                          "inputType": "TextArea",
+                          "help": "Enter the modal body text",
+                          "translatable": true
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
