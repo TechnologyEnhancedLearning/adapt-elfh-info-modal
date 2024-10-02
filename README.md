@@ -5,7 +5,7 @@ An extension to add a button to the nav bar that when clicked displays a modal w
 ## Installation
 
 - Add the [example JSON](example.json) to `course.json`.
-- With [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run `adapt install info-modal`. Alternatively, [download the ZIP](Link to be added) and extract into the src > extensions directory.
+- With [Adapt CLI](https://github.com/adaptlearning/adapt-cli) installed, run `adapt install info-modal`. Alternatively, [download the ZIP](https://github.com/TechnologyEnhancedLearning/adapt-elfh-info-modal) and extract into the src > extensions directory.
 - Run an appropriate Grunt task.
 
 ## Usage
@@ -40,3 +40,12 @@ Contains the following settings:
       * `body` (string):
 
   Body text of the modal prompt e.g. the content could be an accessibility statement
+
+ ![image](https://github.com/user-attachments/assets/5b45390e-f23c-475f-aa86-7dd820d6934e)
+
+ ![image](https://github.com/user-attachments/assets/b85a8edc-3613-4068-b3a4-1950fb4df644)
+
+
+
+  
+
