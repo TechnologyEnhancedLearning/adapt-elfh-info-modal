@@ -26,12 +26,14 @@ Contains the following settings:
 - `_isEnabled` (boolean):
   Controls whether an icon button should be added to the top navigation bar or not. The default value is `true`.
 
+  - `navigationAriaLabel` (string):
+  Sets the navigation button aria label. The default value is `Navigation button alt text`.
+
+  - `_iconType` (string):
+  Sets the navigation button icon. There is a choice of 3 options, "accessibility", "info" and "help". The default value is `accessibility`.
+
 - `_notifyPrompt` (object):
-  Contains the following settings:
-
-      * `_isEnabled` (boolean):
-
-  Controls whether a modal prompt should be displayed if the learner clicks the icon button. The default value is `true`.
+  Contains the following settings:   
 
       * `title` (string):
 
