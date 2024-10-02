@@ -22,7 +22,7 @@
     "navLabel": {
       "type": "string",
       "required": true,
-      "default": Information,
+      "default": "Information",
       "inputType": "Text",
       "translatable": true
     },
